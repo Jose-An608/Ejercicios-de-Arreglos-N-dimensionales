@@ -5,11 +5,12 @@ matriz de 4x4 y muestre el resultado */
 #include <windows.h>
 
 using namespace std;
+int main(){
 
-	
 	int matriz1[4][4];
 	int s = 0;
 	int s1 = 0;
+	int m;
 	
 	SetConsoleOutputCP(CP_UTF8);
 
@@ -18,8 +19,10 @@ using namespace std;
 	cout << "-----------------------------------------------------------" << endl << endl;
 	
 	cout << "Indíque cada elemento de la matriz: " << endl << endl;
-	cadaElemento();
-	<4; i++){
+
+	for (int i=0; i<4; i++){
+		for (int j=0; j<4; j++){
+		
 			cout << "Indíque el elemento " << "[" << i << "]" << "[" << j << "]" << ": ";
 			cin >> matriz1[i][j];
 		}
@@ -43,7 +46,6 @@ using namespace std;
 			if ( i == j) {
 				s = s + matriz1[i][j];
 			}
-		cout << endl;
 		}
 	}
 
@@ -56,7 +58,9 @@ using namespace std;
 			}		
 	    }
 	}
-      
-
-	}
+     
+    m = s  + s1;
+    
+    cout << "La suma de las diagonales de la matriz es: " << m << endl;
+	return 0;
 }
